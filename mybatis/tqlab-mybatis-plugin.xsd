@@ -89,11 +89,9 @@
     <xsd:element name="operation">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:choice>
-                    <xsd:element ref="comment" minOccurs="0" maxOccurs="1" />
-                    <xsd:element ref="params" minOccurs="0" maxOccurs="1" />
-                    <xsd:element ref="result" minOccurs="0" maxOccurs="1"/>
-                </xsd:choice>
+                <xsd:element ref="comment" minOccurs="0" maxOccurs="1" />
+                <xsd:element ref="params" minOccurs="0" maxOccurs="1" />
+                <xsd:element ref="result" minOccurs="0" maxOccurs="1"/>
                 <xsd:element ref="sql" minOccurs="1" maxOccurs="1" />
             </xsd:sequence>
             <xsd:attribute name="id" type="xsd:ID" use="required">
@@ -121,11 +119,9 @@
         </xsd:annotation>
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:choice>
-                    <xsd:element ref="column" minOccurs="0" maxOccurs="unbounded" />
-                    <xsd:element ref="result" minOccurs="0" maxOccurs="unbounded" />
-                    <xsd:element ref="operation" minOccurs="1" maxOccurs="unbounded"/>
-                </xsd:choice>
+                <xsd:element ref="column" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element ref="result" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element ref="operation" minOccurs="1" maxOccurs="unbounded"/>
             </xsd:sequence>
             <xsd:attribute name="name" type="xsd:NCName" use="required"/>
         </xsd:complexType>
@@ -150,7 +146,7 @@
             </xsd:documentation>
         </xsd:annotation>
         <xsd:restriction base="xsd:string">
-            <xsd:pattern value="\s*(.*[a-zA-Z]+.*)+\s*"></xsd:pattern>
+            <xsd:pattern value="[\s\S]+"></xsd:pattern>
         </xsd:restriction>
     </xsd:simpleType>
 </xsd:schema>
