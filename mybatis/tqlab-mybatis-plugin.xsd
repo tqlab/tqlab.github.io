@@ -81,7 +81,7 @@
     <xsd:element name="options">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="option" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element ref="option" minOccurs="1" maxOccurs="unbounded" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
