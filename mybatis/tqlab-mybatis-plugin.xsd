@@ -62,6 +62,29 @@
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
+    <xsd:element name="option">
+        <xsd:complexType>
+            <xsd:attribute name="name" type="xsd:NCName" use="required" >
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <![CDATA[
+                        Option name, useCache, flushCache, resultSetType, statementType, fetchSize, timeout, useGeneratedKeys, keyProperty, keyColumn etc.
+                        ]]>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="options">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="option" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
     
     <xsd:element name="sql" type="Sql">
         <xsd:annotation>
