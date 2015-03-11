@@ -130,6 +130,7 @@
             </xsd:attribute>
             <xsd:attribute name="many" type="xsd:boolean" default="true"/>
             <xsd:attribute name="resultType" type="JavaFullClassName" use="optional" />
+            <xsd:attribute name="parameterType" type="JavaFullClassName" use="optional" />
         </xsd:complexType>
     </xsd:element>
     
