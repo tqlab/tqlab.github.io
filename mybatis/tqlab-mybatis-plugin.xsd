@@ -147,7 +147,7 @@
             <xsd:sequence>
                 <xsd:element ref="column" minOccurs="0" maxOccurs="unbounded" />
                 <xsd:element ref="result" minOccurs="0" maxOccurs="unbounded" />
-                <xsd:element name="sql" minOccurs="0" maxOccurs="unbounded" >
+                <xsd:element name="sqlFragment" minOccurs="0" maxOccurs="unbounded" >
                     <xsd:complexType>
                         <xsd:attribute name="id" type="xsd:ID" use="required">
                             <xsd:annotation>
