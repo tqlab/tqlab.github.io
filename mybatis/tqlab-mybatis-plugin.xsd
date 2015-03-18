@@ -36,7 +36,7 @@
             <xsd:attribute name="name" type="xsd:NCName" use="required" >
                 <xsd:annotation>
                     <xsd:documentation>
-                        <![CDATA[
+                    <![CDATA[
                     Specify a specific java property of the column
                     ]]>
                     </xsd:documentation>
@@ -51,6 +51,25 @@
             <xsd:documentation>
                 <![CDATA[
                 Specify certain parameters for Mybatis Mapper function. For example #{keyword,jdbcType=VARCHAR} .
+                ]]>
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+    <xsd:element name="sqlInclude">
+        <xsd:annotation>
+            <xsd:attribute name="id" type="xsd:NCName" use="required" >
+                <xsd:annotation>
+                    <xsd:documentation>
+                    <![CDATA[
+                    Specify a specific id of the sql fragment.
+                    ]]>
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:documentation>
+                <![CDATA[
+                Specify sql fragment. For example <sql id="test">id,name</sql> .
                 ]]>
             </xsd:documentation>
         </xsd:annotation>
@@ -147,6 +166,7 @@
             <xsd:sequence>
                 <xsd:element ref="column" minOccurs="0" maxOccurs="unbounded" />
                 <xsd:element ref="result" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element ref="sqlInclude" minOccurs="0" maxOccurs="unbounded" />
                 <xsd:element ref="operation" minOccurs="1" maxOccurs="unbounded"/>
             </xsd:sequence>
             <xsd:attribute name="name" type="xsd:NCName" use="required"/>
