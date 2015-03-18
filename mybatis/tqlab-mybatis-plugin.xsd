@@ -149,7 +149,7 @@
                 <xsd:element ref="result" minOccurs="0" maxOccurs="unbounded" />
                 <xsd:element ref="operation" minOccurs="1" maxOccurs="unbounded"/>
             </xsd:sequence>
-            <xsd:element name="sql">
+            <xsd:element name="sql" minOccurs="0" maxOccurs="unbounded" >
                 <xsd:annotation>
                     <xsd:attribute name="id" type="xsd:NCName" use="required" >
                         <xsd:annotation>
