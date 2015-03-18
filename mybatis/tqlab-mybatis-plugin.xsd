@@ -36,7 +36,7 @@
             <xsd:attribute name="name" type="xsd:NCName" use="required" >
                 <xsd:annotation>
                     <xsd:documentation>
-                    <![CDATA[
+                        <![CDATA[
                     Specify a specific java property of the column
                     ]]>
                     </xsd:documentation>
@@ -55,7 +55,7 @@
             </xsd:documentation>
         </xsd:annotation>
     </xsd:element>
-
+    
     <xsd:element name="params">
         <xsd:complexType>
             <xsd:sequence>
@@ -63,7 +63,7 @@
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-
+    
     <xsd:element name="option">
         <xsd:complexType>
             <xsd:attribute name="name" type="xsd:NCName" use="required" >
@@ -78,7 +78,7 @@
             <xsd:attribute name="value" type="xsd:string" use="required" />
         </xsd:complexType>
     </xsd:element>
-
+    
     <xsd:element name="options">
         <xsd:complexType>
             <xsd:sequence>
@@ -117,6 +117,7 @@
                 <xsd:element ref="params" minOccurs="0" maxOccurs="1" />
                 <xsd:element ref="options" minOccurs="0" maxOccurs="1" />
                 <xsd:element ref="result" minOccurs="0" maxOccurs="1"/>
+                <xsd:element ref="sql" minOccurs="1" maxOccurs="1" />
             </xsd:sequence>
             <xsd:attribute name="id" type="xsd:ID" use="required">
                 <xsd:annotation>
@@ -146,10 +147,21 @@
             <xsd:sequence>
                 <xsd:element ref="column" minOccurs="0" maxOccurs="unbounded" />
                 <xsd:element ref="result" minOccurs="0" maxOccurs="unbounded" />
-                <xsd:element ref="sql" minOccurs="0" maxOccurs="unbounded" />
+                <xsd:element name="sql" minOccurs="0" maxOccurs="unbounded" >
+                    <xsd:complexType>
+                        <xsd:attribute name="id" type="xsd:ID" use="required">
+                            <xsd:annotation>
+                                <xsd:documentation>
+                                    <![CDATA[ 
+                                    The unique identifier for a sql fragment. 
+                                    ]]>
+                                </xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:attribute>
+                    </xsd:complexType>
+                </xsd:element>
                 <xsd:element ref="operation" minOccurs="1" maxOccurs="unbounded"/>
             </xsd:sequence>
-            
             <xsd:attribute name="name" type="xsd:NCName" use="required"/>
             <xsd:attribute name="sqlSessionFactory" type="xsd:NCName"/>
         </xsd:complexType>
