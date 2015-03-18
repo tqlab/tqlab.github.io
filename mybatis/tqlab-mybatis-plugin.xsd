@@ -146,19 +146,7 @@
             <xsd:sequence>
                 <xsd:element ref="column" minOccurs="0" maxOccurs="unbounded" />
                 <xsd:element ref="result" minOccurs="0" maxOccurs="unbounded" />
-                <xsd:element name="sql" minOccurs="0" maxOccurs="unbounded" >
-                    <xsd:complexType>
-                        <xsd:attribute name="id" type="xsd:ID" use="required">
-                            <xsd:annotation>
-                                <xsd:documentation>
-                                    <![CDATA[ 
-                                    The unique identifier for a sql fragment. 
-                                    ]]>
-                                </xsd:documentation>
-                            </xsd:annotation>
-                        </xsd:attribute>
-                    </xsd:complexType>
-                </xsd:element>
+                <xsd:element ref="sql" minOccurs="0" maxOccurs="unbounded" />
                 <xsd:element ref="operation" minOccurs="1" maxOccurs="unbounded"/>
             </xsd:sequence>
             
