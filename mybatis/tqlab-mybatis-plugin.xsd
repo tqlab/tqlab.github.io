@@ -135,6 +135,11 @@
     </xsd:element>
     
     <xsd:element name="sqlFragment">
+        <xsd:annotation>
+            <xsd:documentation>
+                
+            </xsd:documentation>
+        </xsd:annotation>
         <xsd:complexType>
             <xsd:attribute name="id" type="xsd:ID" use="required">
                 <xsd:annotation>
