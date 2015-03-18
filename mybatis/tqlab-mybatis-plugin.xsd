@@ -67,11 +67,6 @@
                     </xsd:documentation>
                 </xsd:annotation>
             </xsd:attribute>
-            <xsd:documentation>
-                <![CDATA[
-                Specify sql fragment. For example <sql id="test">id,name</sql> .
-                ]]>
-            </xsd:documentation>
         </xsd:annotation>
     </xsd:element>
     
